@@ -1,0 +1,22 @@
+Zombie Massacre
+
+Obj. Slash zombie heads with a chainsaw (, machete or freddy kruger hands)
+
+Game:
+    ✔ Build pipeline @done(19-10-28 22:10)
+    ✔ Setup the project structure @done(19-10-28 22:10)
+
+Gameplay:
+    ☐ Swing 'chainsaw'
+    ☐ Spawn zombie heads
+    ☐ Hit heads with chainsaw
+
+Controls:
+    ☐ Add keyboard/mouse support
+        ☐ Slash with space
+
+Design:
+    ☐ Model the chainsaw
+    ☐ Add materials for zombie head(s)
+    ☐ Add blood splattering
+
