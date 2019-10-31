@@ -8,15 +8,24 @@ Game:
 
 Gameplay:
     ☐ Swing 'chainsaw'
+        Lets move it between 3 points and everytime we hit space, 
+        we lerp to the next target point. Randomly picky one of the other 
+        targets
     ☐ Spawn zombie heads
     ☐ Hit heads with chainsaw
 
 Controls:
     ☐ Add keyboard/mouse support
         ☐ Slash with space
+    ☐ Gamepad Support
 
 Design:
+    ☐ create environment
     ☐ Model the chainsaw
+    ☐ Add chainsaw SFX
+        ☐ idle
+        ☐ swing
+        ☐ hit
     ☐ Add materials for zombie head(s)
     ☐ Add blood splattering
 

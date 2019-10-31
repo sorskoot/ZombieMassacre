@@ -6,12 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zombie Massacre</title>
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
     <script src="main.js"></script>
 </head>
 
 <body>
-    <a-scene>
-        <a-box position="-1 0 -5" color="blue"></a-box>
+    <a-scene physics="debug: false">
+        <a-assets>
+            <a-asset-item id="chainsaw-obj" src="/models/chainsaw.obj"></a-asset-item>
+            <a-asset-item id="chainsaw-mtl" src="/models/chainsaw.mtl"></a-asset-item>
+
+            <a-asset-item id="head-obj" src="/models/head.obj"></a-asset-item>
+            <a-asset-item id="head-mtl" src="/models/head.mtl"></a-asset-item>
+
+            <img id="zombieface" src="/models/textures/zombiefacemap1.jpg">
+        </a-assets>
+        <a-plane static-body rotation="-90 0 0" scale="10 10 10"></a-plane>
+
+        <a-entity head position="0 .4 -5" >
+            <a-entity scale="0.5 0.5 0.5" obj-model="obj: #head-obj; mtl: #head-mtl" position="0.275 0 0"></a-entity>
+        </a-entity>
+        <!-- <a-sphere head material="src:#zombieface" 
+        rotation="0 -90 0" scale="0.3 0.3 0.3" position="0 .4 -5"></a-sphere> -->
+        <!-- animation="property: rotation; to: 0 270 720; loop: true; dur: 4000; easing:linear">
+
+        </a-sphere> -->
+
+        <a-sky color="#110011"></a-sky>
+
+        <a-entity chainsaw-controls="hand:right">
+            <a-entity obj-model="obj: #chainsaw-obj; mtl: #chainsaw-mtl"></a-entity>
+        </a-entity>
+
+        <a-entity camera position="0 1.6 0" rotation="0 0 0" look-controls="pointerLockEnabled:true">
+        </a-entity>
     </a-scene>
 </body>
 
